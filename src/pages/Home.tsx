@@ -8,6 +8,8 @@ import ButtonStyle from "../components/buttons";
 import PresentationSection from "../components/presentation";
 import Servicos from "../components/servicesSection";
 import Projects from "../components/projectsSection";
+import Footer from "../components/footer";
+
 
 function Home() {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
@@ -79,6 +81,8 @@ function Home() {
         </section>
 
         <Projects />
+
+        <Footer />
       </main>
     </>
   );
