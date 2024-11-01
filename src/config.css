@@ -1,0 +1,28 @@
+:root {
+  --font-title: "Montserrat", sans-serif;
+  --font-body: "Merriweather", serif;
+  --color-background: #000000;
+  --color-div: #131E2F;
+  --color-button: #01A5B1;
+  --color-text: #FFFFFF;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
