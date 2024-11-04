@@ -9,6 +9,7 @@ import PresentationSection from "../components/presentation";
 import Servicos from "../components/servicesSection";
 import Projects from "../components/projectsSection";
 import Footer from "../components/footer";
+import TestimonialsSection from "../components/testimonials";
 
 
 function Home() {
@@ -81,6 +82,8 @@ function Home() {
         </section>
 
         <Projects />
+
+        <TestimonialsSection />
 
         <Footer />
       </main>
