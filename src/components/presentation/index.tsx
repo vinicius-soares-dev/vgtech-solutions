@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../../assets/styles/presentation.css";
-import ButtonStyle from "../buttons";
+
 
 const PresentationSection: React.FC = () => {
     const [visibleSections, setVisibleSections] = useState<boolean[]>(Array(4).fill(false));
@@ -66,7 +66,7 @@ const PresentationSection: React.FC = () => {
                 <h3>Por Que Nos Escolher</h3>
                 <p>Estamos prontos para transformar o seu negócio e levá-lo a outro nível no mundo digital. Conheça agora os serviços que oferecemos e descubra como podemos ajudar você a alcançar seus objetivos.</p>
             </section>
-            <ButtonStyle scrollToId="services-section">Ver nossos Serviços</ButtonStyle>
+            
         </section>
     );
 };

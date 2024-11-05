@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Button, Modal, Typography, MenuItem, Select, FormControl, } from "@mui/material";
 import { styled } from "@mui/system";
+import ButtonStyle from "../buttons";
+import { Link } from "react-router-dom";
 
 interface Option {
   label: string;
@@ -84,30 +86,6 @@ const Servicos = () => {
     },
 
     {
-      name: 'Sites Institucionais',
-      description: "Desenvolvemos sites institucionais que refletem a identidade da sua empresa, com uma navegação intuitiva e design responsivo. Os sites são projetados para fornecer informações sobre sua empresa, serviços e valores, fortalecendo a presença online da marca.",
-      options: [
-        {
-          label: 'Wordpress(PHP)',
-          price: 500
-        },
-        {
-          label: 'HTML/CSS/JavaScript',
-          price: 600
-        },
-        {
-          label: 'React.js',
-          price: 700
-        },
-        {
-          label: 'Angular.js',
-          price: 750
-        }
-
-      ]
-    },
-
-    {
       name: 'E-commerces',
       description: "Criamos lojas virtuais completas e funcionais, otimizadas para vendas online. Nossas soluções incluem integração de pagamento, gestão de estoque e design atraente, garantindo uma experiência de compra para seus clientes.",
       options: [
@@ -178,179 +156,6 @@ const Servicos = () => {
         }
       ]
     },
-
-    {
-      name: 'Tráfego Pago',
-      description: "Oferecemos serviços de gestão de tráfego pago para maximizar o alcance e a conversão dos seus anúncios. Com estratégias personalizadas em plataformas como Google Ads e Facebook Ads, buscamos resultados eficientes e mensuráveis.",
-      options: [
-        {
-          label: 'Configuração Inicial e Análise',
-          price: 300
-        },
-        {
-          label: 'Gestão Mensal',
-          price: 600
-        },
-        {
-          label: 'Consultoria de Estratégia de Tráfego',
-          price: 200
-        },
-      ]
-    },
-
-    {
-      name: 'Desenvolvimento de Aplicações Web',
-      description: "Criamos aplicações web interativas e responsivas, adaptadas às necessidades do seu negócio. Essas aplicações oferecem uma experiência de usuário aprimorada e funcionalidades personalizadas, visando facilitar processos e melhorar a eficiência.",
-      options: [
-        {
-          label: 'React.js + Node.js',
-          price: 1200
-        },
-        {
-          label: 'Angular.js',
-          price: 1300
-        },
-        {
-          label: 'Django(Python)',
-          price: 1500
-        }
-      ]
-    },
-
-    {
-      name: 'Automação de Processos',
-      description: "Oferecemos serviços de automação para otimizar processos de negócios, utilizando ferramentas e técnicas que melhoram a eficiência e reduzem erros. Isso inclui a automação de tarefas repetitivas e integração de sistemas.",
-      options: [
-        {
-          label: 'Node.js + Express',
-          price: 800
-        },
-        {
-          label: 'Python (Automação com Scripts)',
-          price: 700
-        }
-      ]
-    },
-
-    {
-      name: 'Web Scraping',
-      description: "Desenvolvemos soluções de web scraping para coletar dados de sites de forma automatizada. Esse serviço é ideal para empresas que desejam reunir informações de mercado concorrência ou qualquer dado disponível online.",
-      options: [
-        {
-          label: 'Python (Beatiful Soup/Scrapy)',
-          price: 500
-        },
-        {
-          label: 'Node.js (Cheerio)',
-          price: 400
-        }
-      ]
-    },
-
-    {
-      name: 'Otimização de SEO',
-      description: "Oferecemos serviços de otimização para motores de busca (SEO) com o objetivo de melhorar a visibilidade do seu site e atrair mais visitantes. Nossas práticas incluem análise de palavras-chave, otimização de conteúdo e melhorias técnicas.",
-      options: [
-        {
-          label: 'Análise Inicial e Relatório',
-          price: 250
-        },
-        {
-          label: 'Otimização Mensal',
-          price: 600
-        }
-      ]
-    },
-
-    {
-      name: 'Criação de APIs',
-      description: "Desenvolvemos APIs RESTful personalizadas para integrar diferentes sistemas e permitir a troca de informações de maneira eficaz. Esse serviço é essencial para empresas que precisam de comunicação entre plataformas.",
-      options: [
-        {
-          label: 'Node.js + Express',
-          price: 800
-        },
-        {
-          label: 'Laravel (PHP)',
-          price: 900
-        }
-      ]
-    },
-
-    {
-      name: 'Criação de Blogs',
-      description: "Oferecemos a criação de blogs profissionais, com design responsivo e otimização para SEO. Isso inclui a configuração de sistemas de gerenciamento de conteúdo, permitindo fácil atualização e publicação de artigos.",
-      options: [
-        {
-          label: 'Wordpress',
-          price: 400
-        },
-        {
-          label: 'React.js + Markdown',
-          price: 500
-        }
-      ]
-    },
-
-    {
-      name: 'Desenvolvimento de Aplicativos Móveis',
-      description: "Criamos aplicativos móveis personalizados, otimizados para Android e IOS. Nossos aplicativos oferecem uma experiência de usuário intuitiva e funcionais, alinhados com as necessidades específicas do seu negócio.",
-      options: [
-        {
-          label: 'React Native',
-          price: 2000
-        },
-        {
-          label: 'Flutter',
-          price: 2000
-        }
-      ]
-    },
-
-    {
-      name: 'Manutenção de Aplicativos Móveis',
-      description: "Oferecemos serviços de manutenção para aplicativos móveis, garantindo atualizações regulares, correção de bugs e melhorias de desempenho, assim como suporte técnico.",
-      options: [
-        {
-          label: 'React Native (mensal)',
-          price: 500
-        },
-        {
-          label: 'Flutter (mensal)',
-          price: 500
-        }
-      ]
-    },
-
-    {
-      name: 'Consultoria em Desenvolvimento de Aplicativos',
-      description: "Fornecemos consultoria especialiazada para ajudar na definição de requisitos, escolha da tecnologia e estratégias de desenvolvimento de aplicativos móveis, garantindo que seu projeto seja bem-sucedido desde o início.",
-      options: [
-        {
-          label: 'Consultoria Inicial (por hora)',
-          price: 300
-        },
-        {
-          label: 'Pacote de Consultoria Completa (5 horas)',
-          price: 1200
-        }
-      ]
-    },
-
-    {
-      name: 'Integração de APIs em Aplicativos Móveis',
-      description: "Integramos APIs externas em aplicativos móveis para oferecer funcionalidades avançadas, como pagamentos, autenticação e comunicação com outros serviços.",
-      options: [
-        {
-          label: 'React Native',
-          price: 700
-        },
-        {
-          label: 'Flutter',
-          price: 700
-        }
-      ]
-    }
   ];
 
   const ServiceGrid = styled('div')({
@@ -406,6 +211,9 @@ const Servicos = () => {
           ))
         }
       </ServiceGrid>
+      <Link to={"/servicos"}>
+        <ButtonStyle children="Ver Mais Serviços" />
+      </Link>
       <Modal open={openModal} onClose={() => setOpenModal(false)}>
         <ModalContent>
           <Typography 
