@@ -212,7 +212,7 @@ const Servicos = () => {
         }
       </ServiceGrid>
       <Link to={"/servicos"}>
-        <ButtonStyle children="Ver Mais Serviços" />
+      <ButtonStyle children="Ver Mais Serviços" />
       </Link>
       <Modal open={openModal} onClose={() => setOpenModal(false)}>
         <ModalContent>

@@ -1,0 +1,186 @@
+:root {
+  --font-title: "Montserrat", sans-serif;
+  --font-body: "Merriweather", serif;
+  --color-background: #000000;
+  --color-div: linear-gradient(145deg, #1E1E1E, #3D3D3D);
+  --color-button: #01A5B1;
+  --color-text: #FFFFFF;
+  --color-text-muted: rgba(255, 255, 255, 0.85);
+  --color-accent: #F9D65B;
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --shadow-hover: rgba(0, 0, 0, 0.4);
+  --border-radius: 15px;
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+.checkout-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  background: var(--color-div);
+  box-shadow: 0 8px 20px var(--shadow-color);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-accent);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.checkout-title {
+  font-family: var(--font-title);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: var(--color-accent);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+  letter-spacing: 1px;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+label {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+input {
+  padding: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+  font-size: 16px;
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed), border var(--transition-speed);
+  outline: none;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px var(--color-accent), 0 0 20px var(--shadow-hover);
+  border: 2px solid var(--color-accent);
+}
+
+.checkout-button {
+  padding: 15px;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--color-button);
+  color: var(--color-text);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+  margin-top: 15px;
+  position: relative;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.checkout-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  opacity: 0;
+  transition: opacity var(--transition-speed);
+  z-index: -1;
+}
+
+.checkout-button:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px var(--shadow-hover);
+}
+
+.checkout-button:hover::after {
+  opacity: 1;
+}
+
+.checkout-footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.secondary-button {
+  padding: 12px;
+  border: 2px solid var(--color-button);
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--color-button);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  margin-top: 10px;
+}
+
+.secondary-button:hover {
+  background-color: var(--color-button);
+  color: var(--color-text);
+}
+
+/* Animações dinâmicas para feedback */
+.loading-animation {
+  width: 100%;
+  height: 4px;
+  background: var(--color-button);
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Estilo de ícones */
+.icon {
+  font-size: 20px;
+  color: var(--color-accent);
+  margin-right: 10px;
+}
+
+/* Efeitos ao passar o mouse sobre grupos de formulário */
+.form-group:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s;
+}
