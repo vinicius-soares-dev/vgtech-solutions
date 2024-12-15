@@ -4,6 +4,7 @@ import { styled } from "@mui/system";
 import ButtonStyle from "../buttons";
 import { Link } from "react-router-dom";
 
+
 interface Option {
   label: string;
   price: number;
@@ -184,6 +185,8 @@ const Servicos = () => {
     }
   };
 
+
+
   return (
     <Section>
       <ServiceGrid>
@@ -258,13 +261,22 @@ const Servicos = () => {
           >Total: R$ {price}</Typography>
           <Button 
             onClick={() => {
-              const message = `Olá! Estou interessado no serviço: ${selectedService?.name}. Escolhi a opção: ${selectedOption}. Total: R$ ${price}.`;
-              const url = `https://wa.me/5532999823915?text=${encodeURIComponent(message)}`;
-              window.open(url, '_blank');
+
+              // Crie o link de pagamento do PicPay com descrição
+              const username = "vgtech_solutions"; // substitua pelo seu usuário PicPay
+              const paymentDescription = encodeURIComponent(`Serviço: ${selectedService?.name} - Opção: ${selectedOption}`);
+              const paymentUrl = `https://picpay.me/${username}/${price}?note=${paymentDescription}`;
+
+              // Abre o link do PicPay em uma nova aba
+              window.open(paymentUrl, '_blank');
+
             }}
             variant="contained"
             color="primary"
-          >Confirmar</Button>
+          >
+            Confirmar
+        </Button>
+
         </ModalContent>
       </Modal>
     </Section>
