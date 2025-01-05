@@ -1,10 +1,13 @@
 :root {
-  --font-title: "Montserrat", sans-serif;
-  --font-body: "Merriweather", serif;
-  --color-background: #000000;
-  --color-div: #131E2F;
-  --color-button: #01A5B1;
-  --color-text: #FFFFFF;
+  --font-title: "Poppins", serif;
+  --font-body: "Montserrat", sans-serif;
+  --color-background: #FFFFFF;
+  --color-background-secondary: #0D1273;
+  --color-button: #F28627;
+  --color-button-secondary: #359AF2;
+  --color-text: #0D2CD9;
+  --color-text-secondary: #F28627;
+  --color-text-tertiary: #000000;
 }
 
 *,
@@ -17,12 +20,6 @@
 }
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-text);
   height: 100vh;
   width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
