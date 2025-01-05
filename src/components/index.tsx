@@ -12,8 +12,9 @@ import {
   Collapse,
   Box,
   Button,
+  Link
 } from "@mui/material";
-import { Menu as MenuIcon, Close as CloseIcon, ExpandLess, ExpandMore } from "@mui/icons-material";
+import { Menu as MenuIcon, Close as CloseIcon, ExpandLess, ExpandMore, Facebook, LinkedIn, Instagram } from "@mui/icons-material";
 import { useTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 
@@ -70,6 +71,8 @@ const Header: React.FC = () => {
     },
   ];
 
+
+
   return (
     <AppBar position="static" sx={{ backgroundColor: "var(--color-background)", color: "var(--color-text)" }}>
       <Toolbar>
@@ -84,7 +87,7 @@ const Header: React.FC = () => {
             </Typography>
 
             <Drawer anchor="left" open={drawerOpen} onClose={() => toggleDrawer(false)}>
-              <Box sx={{ width: 250 }} role="presentation" >
+              <Box sx={{ width: 250,  }} role="presentation" >
                 {/* Close Button */}
                 <Box sx={{ display: "flex", justifyContent: "flex-end", p: 1 }}>
                   <IconButton onClick={() => toggleDrawer(false)}>
@@ -94,7 +97,7 @@ const Header: React.FC = () => {
                 <List>
                   {menuItems.map((item, index) => (
                     <React.Fragment key={index}>
-                      <ListItem component='button' onClick={() => toggleSubmenu(item.label)}>
+                      <ListItem onClick={() => toggleSubmenu(item.label)} sx={{ background: "var(--color-background)"}}>
                         <ListItemText primary={item.label} />
                         {item.submenu.length > 0 ? (
                           activeSubmenu === item.label ? <ExpandLess /> : <ExpandMore />
@@ -108,8 +111,9 @@ const Header: React.FC = () => {
                               component="a"
                               href={subItem.link}
                               sx={{
+                                color: "var(--color-text)" ,
                                 pl: 4,
-                                "&:hover": { textDecoration: "none", backgroundColor: "var(--color-button-secondary)" },
+                                "&:hover": { textDecoration: "none", backgroundColor: "var(--color-button-secondary)", color: "var(--color-text-tertiary)", transition: '1.5s', fontWeight: 'bolder' },
                               }}
                             >
                               <ListItemText primary={subItem.label} />
@@ -122,10 +126,77 @@ const Header: React.FC = () => {
                   ))}
                 </List>
               </Box>
+              <Box
+      sx={{
+        position: "absolute",
+        bottom: 0,
+        backgroundColor: "var(--color-background)",
+        color: "var(--color-text-tertiary)",
+        py: 3,
+        px: 2,
+        textAlign: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      {/* Logo ou Nome da Empresa */}
+      <Typography
+        variant="h6"
+        sx={{ fontFamily: "var(--font-title)", fontWeight: "bold", mb: 1, color: "var(--color-text-secondary)" }}
+      >
+        VG Tech Solutions
+      </Typography>
+
+      {/* Informações de Contato */}
+      <Typography variant="body2" sx={{ fontFamily: "var(--font-body)", mb: 1 }}>
+        Email:{" "}
+        <Link href="mailto:solutionsvgtech@gmail.com" sx={{ color: "var(--color-text-secondary)", fontWeight: "bold",textDecoration: "none" }}>
+          solutionsvgtech@gmail.com
+        </Link>
+      </Typography>
+
+      {/* Ícones de Redes Sociais */}
+      <Box sx={{ display: "flex", justifyContent: "center", gap: 2, mb: 2 }}>
+        <IconButton
+          href="https://facebook.com"
+          target="_blank"
+          sx={{ color: "var(--color-button-secondary)" }}
+        >
+          <Facebook />
+        </IconButton>
+        <IconButton
+          href="https://linkedin.com"
+          target="_blank"
+          sx={{ color: "var(--color-button-secondary)" }}
+        >
+          <LinkedIn />
+        </IconButton>
+        <IconButton
+          href="https://instagram.com"
+          target="_blank"
+          sx={{ color: "var(--color-button-secondary)" }}
+        >
+          <Instagram />
+        </IconButton>
+      </Box>
+
+      {/* Texto de Direitos Autorais */}
+      <Typography
+        variant="caption"
+        sx={{
+          fontFamily: "var(--font-body)",
+          color: "var(--color-text)",
+          fontSize: "0.9rem",
+        }}
+      >
+        &copy; 2024 VG Tech Solutions. All rights reserved.
+      </Typography>
+    </Box>
             </Drawer>
           </>
         ) : (
-          <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-around", width: "100%" }}>
+          <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-around", width: "100%"}}>
             {/* Desktop Menu */}
             <Typography variant="h6" sx={{ fontFamily: "var(--font-title)", mr: 2, fontSize: "2rem" }}>
               VG Tech
