@@ -1,5 +1,13 @@
 .home-section {
-  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-us {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -23,8 +31,54 @@
   margin-top: 2rem;
 }
 
+.presentation-section .carousel {
+  width: 100%; /* Padrão para telas menores */
+  max-width: 800px; /* Limite em telas menores */
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.presentation-section .cta-presentation {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 24px;
+  background-color: var(--color-button-secondary);
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.presentation-section .cta-presentation:hover {
+  background-color: var(--color-button);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.presentation-section .cta-presentation:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
 @media screen and (min-width: 1000px) {
   .presentation-section .title-presentation {
     font-size: 2.5rem;
+  }
+
+  .presentation-section .carousel {
+      max-width: 1200px; /* Aumenta o tamanho do carrossel em desktops maiores */
+  }
+
+  .presentation-section .carousel .title-card {
+    font-size: 2rem;
+  }
+
+  .presentation-section .carousel .description-card {
+    font-size: 1.2rem;
   }
 }

@@ -4,6 +4,7 @@ import Carousel from "react-material-ui-carousel";
 import { Card, CardContent, Typography } from "@mui/material";
 import { Business, Code, ShoppingCart, Web, Pages, Storefront } from "@mui/icons-material";
 
+
 const services = [
   {
     title: "Sites Institucionais",
@@ -44,11 +45,15 @@ function Home() {
         <Header />
         <section className="presentation-section">
           <h1 className="title-presentation">Sua Porta de Entrada para o Sucesso Online!</h1>
+          <section className="carousel">
+            
+          </section>
           <Carousel
             interval={3000}
             animation="slide"
             indicators={false}
-            sx={{ width: "100%", maxWidth: 800, margin: "20px auto", marginTop: '5rem', overflow: 'hidden' }}
+            sx={{ width: "100%", maxWidth: 800,md: 1000, lg: 1200 , margin: "20px auto", marginTop: '5rem', overflow: 'hidden' }}
+            className="carousel"
           >
             {services.map((service, index) => (
               <Card
@@ -71,6 +76,7 @@ function Home() {
                     variant="h6"
                     component="div"
                     sx={{ fontFamily: "Poppins", fontWeight: "bold", textAlign: "center", overflow: 'hidden'  }}
+                    className="title-card"
                   >
                     {service.title}
                   </Typography>
@@ -78,6 +84,7 @@ function Home() {
                     variant="body2"
                     color="text.secondary"
                     sx={{ fontFamily: "Montserrat", textAlign: "center", overflow: 'hidden'  }}
+                    className="description-card"
                   >
                     {service.description}
                   </Typography>
@@ -85,7 +92,26 @@ function Home() {
               </Card>
             ))}
           </Carousel>
+
+          <button
+            className="cta-presentation"
+            onClick={() => {
+              const aboutSection = document.getElementById("about-us");
+              if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: "smooth" });
+              } else {
+                console.error("Seção 'about-us' não encontrada!");
+              }
+            }}
+          >
+           Quero Saber Mais
+          </button>
+
         </section>
+      </section>
+
+      <section className="about-us" id="about-us">
+            hello world
       </section>
     </>
   );

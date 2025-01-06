@@ -74,7 +74,7 @@ const Header: React.FC = () => {
 
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "var(--color-background)", color: "var(--color-text)" }}>
+    <AppBar position="static" sx={{ backgroundColor: "var(--color-background)", color: "var(--color-text)", position: 'fixed', top: 0, zIndex: 10 }}>
       <Toolbar>
         {isMobile ? (
           <>
