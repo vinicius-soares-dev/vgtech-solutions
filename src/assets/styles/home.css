@@ -1,7 +1,30 @@
 .home-section {
-  height: 100%;
+  min-height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+
+.presentation-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.title-presentation {
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  color: var(--color-text);
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .presentation-section .title-presentation {
+    font-size: 2.5rem;
+  }
 }

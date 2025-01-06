@@ -159,21 +159,21 @@ const Header: React.FC = () => {
       {/* Ícones de Redes Sociais */}
       <Box sx={{ display: "flex", justifyContent: "center", gap: 2, mb: 2 }}>
         <IconButton
-          href="https://facebook.com"
+          href="https://facebook.com/share/14TGFT9kbr/"
           target="_blank"
           sx={{ color: "var(--color-button-secondary)" }}
         >
           <Facebook />
         </IconButton>
         <IconButton
-          href="https://linkedin.com"
+          href="https://linkedin.com/company/vg-tech-solutions/"
           target="_blank"
           sx={{ color: "var(--color-button-secondary)" }}
         >
           <LinkedIn />
         </IconButton>
         <IconButton
-          href="https://instagram.com"
+          href="https://instagram.com/vgtech_solutions"
           target="_blank"
           sx={{ color: "var(--color-button-secondary)" }}
         >
