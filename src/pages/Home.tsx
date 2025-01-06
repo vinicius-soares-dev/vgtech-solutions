@@ -45,7 +45,7 @@ function Home() {
         <section className="presentation-section">
           <h1 className="title-presentation">Sua Porta de Entrada para o Sucesso Online!</h1>
           <Carousel
-            interval={2000}
+            interval={3000}
             animation="slide"
             indicators={false}
             sx={{ width: "100%", maxWidth: 800, margin: "20px auto", marginTop: '5rem', overflow: 'hidden' }}
