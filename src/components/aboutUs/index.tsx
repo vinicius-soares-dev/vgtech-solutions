@@ -115,6 +115,14 @@ function AboutUs() {
                     "&:hover": { backgroundColor: "#0D2CD9" },
                     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
                   }}
+                  onClick={() => {
+                    const projectSection = document.getElementById("projects");
+                    if (projectSection) {
+                      projectSection.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      console.error("Seção 'projects' não encontrada!");
+                    }
+                  }}
                 >
                   Nossos Projetos
                 </Button>

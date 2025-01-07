@@ -4,6 +4,7 @@ import Carousel from "react-material-ui-carousel";
 import { Card, CardContent, Typography } from "@mui/material";
 import { Business, Code, ShoppingCart, Web, Pages, Storefront } from "@mui/icons-material";
 import AboutUs from "../components/aboutUs";
+import Projects from "../components/projects";
 
 
 const services = [
@@ -113,6 +114,10 @@ function Home() {
 
       <section className="about-us" id="about-us">
             <AboutUs />
+      </section>
+
+      <section className="projects" id="projects">
+           <Projects />
       </section>
     </>
   );
