@@ -35,6 +35,12 @@ const Header: React.FC = () => {
 
   const menuItems = [
     {
+      label: "Home",
+      submenu: [
+        { label: "Voltar pra Tela Inicial", link: "/" },
+      ]
+    },
+    {
       label: "Serviços",
       submenu: [
         { label: "Criação de Landing Pages", link: "#" },
@@ -46,29 +52,46 @@ const Header: React.FC = () => {
     {
       label: "Projetos",
       submenu: [
-        { label: "Projetos em Andamento", link: "#" },
-        { label: "Projetos Concluídos", link: "#" },
+        { label: "Projetos Recentes", link: "#projects" },
       ],
     },
     {
       label: "Blog",
-      submenu: [{ label: "Ver Blog", link: "#" }],
+      submenu: [{ label: "Ver Blog", link: "/blog" }],
     },
     {
       label: "Área do Cliente",
-      submenu: [{ label: "Login na Área do Cliente", link: "#" }],
+      submenu: [{ label: "Login na Área do Cliente", link: "/area51" }],
     },
     {
       label: "Contato",
       submenu: [
         { label: "Enviar Email", link: "#" },
-        { label: "WhatsApp", link: "#" },
+        { label: "WhatsApp", link: "Wa.me/5521999989550" },
       ],
     },
     {
       label: "Área do Administrador",
-      submenu: [{ label: "Login na Área do Administrador", link: "#" }],
+      submenu: [{ label: "Login na Área do Administrador", link: "/admin" }],
     },
+  ];
+
+  const desktopItems = [
+    {
+      label: "Home", link: "/",
+    },
+    {
+      label: "Serviços", link: "/servicos"
+    },
+    {
+      label: "Blog", link: "blog"
+    },
+    {
+      label: "Contato", link: "/contatos"
+    },
+    {
+      label: "Área do Cliente", link: "/area51"
+    }
   ];
 
 
@@ -201,7 +224,7 @@ const Header: React.FC = () => {
             <Typography variant="h6" sx={{ fontFamily: "var(--font-title)", mr: 2, fontSize: "2rem" }}>
               VG Tech
             </Typography>
-            {menuItems.map((item, index) => (
+            {desktopItems.map((item, index) => (
               <Box
                 key={index}
                 sx={{
@@ -216,43 +239,12 @@ const Header: React.FC = () => {
                 <Button
                   color="inherit"
                   sx={{ textTransform: "none" }}
-                  onClick={() => toggleSubmenu(item.label)}
+                  onClick={
+                    () => window.location.href = item.link
+                  }
                 >
                   {item.label}
                 </Button>
-                <Box
-                  className="submenu"
-                  sx={{
-                    display: activeSubmenu === item.label ? "block" : "none",
-                    position: "absolute",
-                    top: "100%",
-                    left: 0,
-                    backgroundColor: "var(--color-background)",
-                    boxShadow: 3,
-                    zIndex: 10,
-                    minWidth: "150px",
-                  }}
-                >
-                  {item.submenu.map((subItem, subIndex) => (
-                    <Box
-                      key={subIndex}
-                      component="a"
-                      href={subItem.link}
-                      sx={{
-                        display: "block",
-                        px: 2,
-                        py: 1,
-                        color: "var(--color-text)",
-                        textAlign: "left",
-                        textDecoration: "none",
-                        fontFamily: "var(--font-body)",
-                        "&:hover": { backgroundColor: "var(--color-button-secondary)", color: "#FFF" },
-                      }}
-                    >
-                      {subItem.label}
-                    </Box>
-                  ))}
-                </Box>
               </Box>
             ))}
           </Box>

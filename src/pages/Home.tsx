@@ -5,6 +5,8 @@ import { Card, CardContent, Typography } from "@mui/material";
 import { Business, Code, ShoppingCart, Web, Pages, Storefront } from "@mui/icons-material";
 import AboutUs from "../components/aboutUs";
 import Projects from "../components/projects";
+import Testimonials from "../components/testimonials";
+import Footer from "../components/footer";
 
 
 const services = [
@@ -118,6 +120,13 @@ function Home() {
 
       <section className="projects" id="projects">
            <Projects />
+      </section>
+
+      <section className="testimonials">
+        <Testimonials />
+      </section>
+      <section className="footer">
+        <Footer />
       </section>
     </>
   );

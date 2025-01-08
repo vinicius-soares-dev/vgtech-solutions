@@ -23,6 +23,19 @@
   justify-content: center;
 }
 
+.bpo-financeiro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-system {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .marketplace .logo-frutaqui {
   width: 400px;
@@ -30,6 +43,16 @@
 }
 
 .portal-empregos .logo-osorio {
+  width: 400px;
+  margin: 2rem;
+}
+
+.bpo-financeiro .logo-bpo {
+  width: 400px;
+  margin: 2rem;
+}
+
+.control-system .logo-control {
   width: 400px;
   margin: 2rem;
 }
@@ -43,6 +66,22 @@
 }
 
 .portal-empregos .title-portal {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-body);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.bpo-financeiro .title-bpo {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-body);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.control-system .title-control {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   font-family: var(--font-body);
@@ -70,10 +109,20 @@
   color: var(--color-background);
   font-weight: bold;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 .btn:hover {
   background-color: var(--color-button);
   transition: 1s ease-in;
+}
+
+@media screen and (min-width: 1000px) {
+  .projects-new {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
 }
 
