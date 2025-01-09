@@ -98,7 +98,7 @@
   margin: 2rem;
 }
 
-.btn {
+.btn-project {
   font-size: 1.2rem;
   padding: 1rem 2rem;
   font-family: var(--font-body);
@@ -112,7 +112,7 @@
   cursor: pointer;
 }
 
-.btn:hover {
+.btn-project:hover {
   background-color: var(--color-button);
   transition: 1s ease-in;
 }

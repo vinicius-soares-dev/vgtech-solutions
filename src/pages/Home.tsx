@@ -7,6 +7,8 @@ import AboutUs from "../components/aboutUs";
 import Projects from "../components/projects";
 import Testimonials from "../components/testimonials";
 import Footer from "../components/footer";
+import ServicesSection from "../components/services";
+import OfferSection from "../components/offerSection";
 
 
 const services = [
@@ -125,6 +127,15 @@ function Home() {
       <section className="testimonials">
         <Testimonials />
       </section>
+
+      <section className="services">
+        <ServicesSection />
+      </section>
+
+      <section className="offer">
+        <OfferSection />
+      </section>
+
       <section className="footer">
         <Footer />
       </section>

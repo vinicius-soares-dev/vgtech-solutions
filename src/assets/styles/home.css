@@ -30,6 +30,16 @@
   justify-content: center;
 }
 
+.services {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
 .presentation-section {
   display: flex;
   flex-direction: column;
