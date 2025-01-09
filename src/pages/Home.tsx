@@ -9,6 +9,7 @@ import Testimonials from "../components/testimonials";
 import Footer from "../components/footer";
 import ServicesSection from "../components/services";
 import OfferSection from "../components/offerSection";
+import ContactForm from "../components/form";
 
 
 const services = [
@@ -134,6 +135,10 @@ function Home() {
 
       <section className="offer">
         <OfferSection />
+      </section>
+
+      <section className="form-contact">
+        <ContactForm />
       </section>
 
       <section className="footer">

@@ -144,10 +144,11 @@ const OfferSection = () => {
                 borderRadius: 4,
                 boxShadow: "0 10px 40px rgba(0, 0, 0, 0.3)",
                 color: "#FFFFFF",
+                overflow: "hidden",
               }}
             >
               <CardContent>
-                <Typography variant="h5" sx={{ fontWeight: 700, mb: 3, fontFamily: "var(--font-title)" }}>
+                <Typography variant="h5" sx={{ fontWeight: 700, mb: 3, fontFamily: "var(--font-title)", overflow: "hidden", }}>
                   Oferta Exclusiva Apenas Hoje!
                 </Typography>
                 <Box
@@ -158,7 +159,8 @@ const OfferSection = () => {
                     mb: 4,
                     textAlign: "left",
                     lineHeight: 1.8,
-                    fontFamily: "var(--font-body)"
+                    fontFamily: "var(--font-body)",
+                    overflow: "hidden",
                   }}
                 >
                   {[
