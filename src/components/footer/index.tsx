@@ -30,7 +30,7 @@ const Footer = () => {
                 variant="body1"
                 sx={{ fontFamily: "Montserrat, sans-serif", color: "#FFFFFF" }}
               >
-                solutionsvgtech@gmail.com
+                contact@vgtechsolutionns.com.br
               </Typography>
             </Box>
             <Box display="flex" alignItems="center" mb={2}>

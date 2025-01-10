@@ -174,8 +174,8 @@ const Header: React.FC = () => {
       {/* Informações de Contato */}
       <Typography variant="body2" sx={{ fontFamily: "var(--font-body)", mb: 1 }}>
         Email:{" "}
-        <Link href="mailto:solutionsvgtech@gmail.com" sx={{ color: "var(--color-text-secondary)", fontWeight: "bold",textDecoration: "none" }}>
-          solutionsvgtech@gmail.com
+        <Link href="mailto:contact@vgtechsolutions.com.br" sx={{ color: "var(--color-text-secondary)", fontWeight: "bold",textDecoration: "none" }}>
+          contact@vgtechsolutions.com.br
         </Link>
       </Typography>
 
